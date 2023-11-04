@@ -8,8 +8,6 @@ class Maze {
         this.columns = columns;
         this.grid = [];
         this.stack = [];
-        //this.canvas = document.querySelector('.maze');
-        //this.context = this.canvas.getContext('2d');
         this.currentCell;
     }
 
@@ -100,7 +98,6 @@ class Cell {
     }
 
     drawWall(x1, y1, x2, y2) {
-        //let ctx = this.parentGrid.context;
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
@@ -138,7 +135,6 @@ class Cell {
     show(size, rows, columns) {
         let x = (this.colNum * size) / columns;
         let y = (this.rowNum * size) / rows;
-        //let ctx = this.parentGrid.context;
 
         ctx.strokeStyle = 'white';
         ctx.fillStyle = 'black';
